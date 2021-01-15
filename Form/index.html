@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery</title>
+
+	<!-- main style  -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	
+</head>
+<body>
+ 
+	<div class="reg">
+		<h2>Sign up Now</h2>
+		<hr>
+		<h3></h3>
+		<input id="name" type="text" placeholder="Name">
+		<input id="email" type="email" placeholder="Email">
+		<input  id="cell" type="number" placeholder="Cell">
+		<input id="password" type="password" placeholder="Password">
+		<button>Sign up</button>
+	</div>
+
+	<!-- jQuery libs  -->
+	<script src="assets/js/jquery-3.5.1.min.js"></script>
+	<script src="assets/js/script.js"></script>
+	<script>
+		 
+		$('button').click(function(){
+			// get value 
+			let name = $('#name').val();
+			let email = $('#email').val();
+			let cell = $('#cell').val();
+			let password = $('#password').val();
+
+			if (name == '' || email == '' || cell == '' || password == '') {
+				$('h3').html('<span style= "color: red">All fields are required !</span>');
+			}else{
+				$('h3').html('<span style= "color: green">Your are Successfully Submited</span>');
+			}
+		});
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery</title>
+
+	<!-- main style  -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	
+</head>
+<body>
+ 	<!-- Toggle  -->
+ 	<h2>Toggle</h2>
+	<button>Submit</button>
+	<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Sed maxime eum ducimus, veritatis, excepturi quasi sit nesciunt velit quae ratione?</p>
+	<hr>
+	<h2>slide toggle</h2>
+	<button>Submit</button>
+	<p id="p">Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Sed maxime eum ducimus, veritatis, excepturi quasi sit nesciunt velit quae ratione?</p>
+
+	<!-- jQuery libs  -->
+	<script src="assets/js/jquery-3.5.1.min.js"></script>
+	<script>
+		// Toggle function start
+		$('button').click(function(){
+			$('p').toggle();
+		// Toggle function end
+
+		});
+		// slidetoggle function start
+		$('button').click(function(){
+			$('p#p').slideToggle('slow');
+		});
+		// slidetoggle function end
+	</script>
+	
+</body>
+</html>
