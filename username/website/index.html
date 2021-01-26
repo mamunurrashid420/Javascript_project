@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery</title>
+
+	<!-- main style  -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	
+</head>
+<body>
+ 
+	<input type="text">
+	<!-- <button>Submit</button> -->
+	<hr>
+	<h1></h1>
+	
+
+	<!-- jQuery libs  -->
+	<script src="assets/js/jquery-3.5.1.min.js"></script>
+	<script src="assets/js/script.js"></script>
+
+	<script>
+		$('input').keyup(function(){
+			let value= $('input').val();
+			let num = value.length;
+			if(num == ''){
+				$('h1').html('<span style="color: red">Plese write something here..........</span>');
+			}else if (num > 0 && num <=5) {
+				$('h1').html('<span style="color: yellow">Please atleast 6 digit</span>');
+			}else if (num>5 && num<=12 ) {
+				$('h1').html('<span style="color: green">letter is stable here Now!</span>');
+			}else if (num> 12) {
+				$('h1').html('<span style="color: orange">your user name is so long</span>');
+			}
+
+		});	
+	</script>
+</body>
+</html>

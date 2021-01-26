@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery</title>
+
+	<!-- main style  -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	
+</head>
+<body>
+ 
+	<input class="1" type="text">
+	<input class="2" type="text">
+	<button>add</button>
+	<!-- <button>Submit</button> -->
+	<hr>
+	<ul>
+		
+	</ul>
+	
+
+	<!-- jQuery libs  --> 
+	<script src="assets/js/jquery-3.5.1.min.js"></script>
+	<script src="assets/js/script.js"></script>
+
+	<script>
+		$('button').click(function(){
+			let todo = $('input.1').val();
+			let time = $('input.2').val();
+			$('ul').append('<li>' + todo + 'time' + time + '<button id="remove"> Remove</button></li>');
+			$('input').val('');
+		});	
+		$(document).on('click','button#remove',function(){
+			$(this).parent('li').remove();
+		});
+
+
+		// ***************
+		// $('button').click(function(){
+		// 	let pic =$('input').val();
+		// 	$('ul').append('<li> <img src="assets/img/" alt="" style= "width: 100px; height:100px">'+ pic+ '</li>');
+		// 	$('input').val();
+		// });
+	</script>
+</body>
+</html>
